@@ -84,12 +84,8 @@ function Output({ movies, onDelete, onEdit }) {
             <strong>Year Release:<br></br></strong> {movie.year}
           </p>
           <p>
-            <strong>Movie Rate:<br></br></strong> {movie.rating} -{" "}
-            {movie.rating >= 8
-              ? "Highly Recommended"
-              : movie.rating >= 5
-              ? "Recommended"
-              : "Not Recommended"}
+            <strong>Rate:<br></br></strong> {movie.rating} -{" "}
+            {movie.rating < 5 ? "Not Recommended" : "Highly Recommended"}
           </p>
           <p>
             <strong>Movie Cast:</strong>
